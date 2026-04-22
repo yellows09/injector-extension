@@ -1,4 +1,4 @@
-# Ozon Operations Injector
+# Operations Injector
 
 Chrome extension (Manifest V3) для изучения техник модификации API-ответов на лету без изменения серверной части.
 
