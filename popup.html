@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <span class="header__title">fake-ops</span>
+    <span id="status-badge" class="badge badge--on">● активен</span>
+  </header>
+
+  <!-- Переключатель -->
+  <div class="toggle-section">
+    <div class="toggle-section__text">
+      <div class="toggle-section__label">Перехват запросов</div>
+      <div class="toggle-section__sub">8 фейковых операций</div>
+    </div>
+
+    <div id="toggle-wrap" class="toggle-wrap" role="switch" aria-checked="true" tabindex="0">
+      <div id="toggle-track" class="toggle-track">
+        <div id="toggle-thumb" class="toggle-thumb"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Список операций -->
+  <div class="section-label">ДАТА ОПЕРАЦИЙ</div>
+  <div id="ops-list"></div>
+
+  <!-- Подключаем storage.js ДО popup.js — порядок важен! -->
+  <script src="js/storage.js"></script>
+  <script src="js/popup.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,194 @@
+/* ── Переменные ──────────────────────────────────────── */
+:root {
+  --bg:       #ffffff;
+  --bg-sec:   #f5f5f4;
+  --border:   #d6d3d1;
+  --text:     #1c1917;
+  --text-sec: #78716c;
+  --green:    #22c55e;
+  --red:      #ef4444;
+  --font:     -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mono:     'SF Mono', 'Fira Code', monospace;
+  --radius:   8px;
+}
+
+/* ── Сброс и base ────────────────────────────────────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  width: 360px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 13px;
+}
+
+/* ── Шапка ───────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 14px;
+  background: var(--bg-sec);
+  border-bottom: 0.5px solid var(--border);
+}
+
+.header__title {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ── Бейдж статуса ───────────────────────────────────── */
+.badge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 9px;
+  border-radius: 20px;
+}
+
+.badge--on {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge--off {
+  background: var(--bg-sec);
+  color: var(--text-sec);
+}
+
+/* ── Секция переключателя ────────────────────────────── */
+.toggle-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.toggle-section__label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.toggle-section__sub {
+  font-size: 11px;
+  color: var(--text-sec);
+}
+
+/* ── Toggle переключатель ────────────────────────────── */
+.toggle-wrap {
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.toggle-track {
+  width: 42px;
+  height: 23px;
+  border-radius: 12px;
+  background: var(--green);
+  position: relative;
+  transition: background 0.2s;
+}
+
+.toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 22px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: white;
+  transition: left 0.15s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* ── Заголовок списка ────────────────────────────────── */
+.section-label {
+  padding: 10px 14px 4px;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-sec);
+  letter-spacing: 0.08em;
+}
+
+/* ── Строка операции ─────────────────────────────────── */
+.row {
+  padding: 9px 14px;
+  border-top: 0.5px solid var(--border);
+}
+
+.row__name {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+.row__bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Сумма ───────────────────────────────────────────── */
+.amount {
+  font-size: 11px;
+  min-width: 76px;
+}
+
+.amount--neg { color: var(--red); }
+.amount--pos { color: var(--green); }
+
+/* ── Инпут даты ──────────────────────────────────────── */
+.date-input {
+  flex: 1;
+  min-width: 0;
+  font-size: 11px;
+  padding: 3px 6px;
+  border: 0.5px solid var(--border);
+  border-radius: 5px;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+}
+
+.date-input:focus {
+  border-color: #a8a29e;
+}
+
+/* ── Строка с полями суммы/телефона ──────────────────── */
+.row__bottom--fields {
+  margin-top: 5px;
+}
+
+.field-input {
+  flex: 1;
+  min-width: 0;
+  font-size: 11px;
+  padding: 3px 6px;
+  border: 0.5px solid var(--border);
+  border-radius: 5px;
+  background: var(--bg);
+  color: var(--text);
+  outline: none;
+}
+
+.field-input:focus {
+  border-color: #a8a29e;
+}
+
+/* ── Точка "сохранено" ───────────────────────────────── */
+.saved-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
